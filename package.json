@@ -1,0 +1,28 @@
+{
+  "name": "actividad-practica-solid",
+  "version": "1.0.0",
+  "description": "Al terminar estos ejercicios deberias poder:",
+  "main": "index.js",
+  "scripts": {
+   "ej1":"node ejercicios/01-srp.ts",
+   "ej2":"node ejercicios/02-srp.ts",
+   "ej3":"node ejercicios/03-srp.ts",
+   "ej4":"node ejercicios/04-srp.ts",
+   "ej5":"node ejercicios/05-srp.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aguscenturion/actividad-practica-SOLID.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aguscenturion/actividad-practica-SOLID/issues"
+  },
+  "homepage": "https://github.com/aguscenturion/actividad-practica-SOLID#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
