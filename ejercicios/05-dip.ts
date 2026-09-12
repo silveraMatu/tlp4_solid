@@ -4,13 +4,23 @@ class EmailSender {
   }
 }
 
-class OrderService {
-  createOrder(customerEmail: string): void {
-    console.log("Pedido creado");
+interface INotifier {
+  send(to: string, message: string): void
+}
 
-    const emailSender = new EmailSender();
-    emailSender.send(customerEmail, "Tu pedido fue creado");
+class Notifier implements INotifier{
+  send(to: string, message: string): void {
   }
 }
 
-new OrderService().createOrder("ana@example.com");
+class OrderService {
+  constructor(private emailSender: INotifier){}
+
+  createOrder(customerEmail: string): void {
+    console.log("Pedido creado");
+
+    this.emailSender.send(customerEmail, "Tu pedido fue creado");
+  }
+}
+
+new OrderService(new Notifier()).createOrder("susana@gmail.com");
